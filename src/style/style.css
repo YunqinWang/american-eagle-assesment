@@ -607,18 +607,67 @@
   .hero__carousel-img {
       height: 200px;
       overflow: hidden;
+      transform-style: preserve-3d;
   }
   
   .hero__carousel-img img {
     height: 200px;
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
     bottom: 0;
     object-fit: cover;
     object-position: right;
     width: 100%;
+    transition: 0.5s;
+  }
+
+  .slide-prev{
+    transform: translateX(-100%);
+    z-index: 10;
+    opacity: 0;
+    
+  }
+  .slide-next{
+    transform: translateX(100%);
+    z-index: 10;
+    opacity: 0;
+  }
+  .slide-curr{
+    transform: translateX(0);
+    z-index: 0;
+    opacity: 1;
+  }
+  /* .slide-prev-front{
+    z-index: 20;
+  }
+  .slide-next-back{
+    z-index: 0;
+  } */
+
+  /* slider arrow */
+  .hero__carousel-leftArr,
+  .hero__carousel-rightArr{
+    position: absolute;
+    top: 50%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+  }
+
+  .hero__carousel-leftArr:active{
+    transform:  rotate(180deg)  scale(1.1);
+  }
+  .hero__carousel-rightArr:active {
+    transform: scale(1.1);
+  }
+  
+  .hero__carousel-leftArr{
+    left:5%;
+    transform: rotate(180deg);
+  }
+  .hero__carousel-rightArr{
+    right:5%;
   }
   
   .hero__outter-text-container {
@@ -641,18 +690,26 @@
   .hero__inner-product-sale{
     display: flex;
     align-items: center;
+    position: relative;
   }
 
-  .hero__inner-product-saleNumber{
+  .hero__inner-product-sale h1{
     font-size: 80px;
-    margin-left: 15px;
+    margin-left: 45px;
   }
+
+  .hero__inner-product-saleTag{
+    width:20%;
+    position: absolute;
+    top:10%;
+  }
+
   .hero__product-mini-title,
   .hero__inner-product-mini-title {
     text-transform: uppercase;
   }
 
-  .hero__inner-product-saleNumber,
+  .hero__inner-product-sale h1,
   .hero__inner-product-mini-title,
   .hero__inner-product-description{
     color:#F25050;
@@ -724,7 +781,7 @@
   
       .hero__outter-text-container {
           width:28%;
-          background-color: rgba(0, 0, 0, 0.1);
+          background-color: rgba(255, 255, 255, 0.5);
           min-width: 100px;
           min-height: 100px;
           margin: 0;
