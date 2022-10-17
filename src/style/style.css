@@ -18,11 +18,21 @@
   img {
       max-width: 100%;
   }
-  a,
-  a:hover{
+  a{
+    cursor: pointer;
     text-decoration: none;
+    color:#767676;
   }
 
+  a:hover,a:focus,
+  li a:hover,li a:focus{
+    color: #59A7FF;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+  ul {
+    list-style-type: none;
+  }
   h1{
     font-size: 70px;
     font-weight: 600;
@@ -143,8 +153,6 @@ a[class*="fill-blue"]{
   //////////////////HIDING DESKTOP MENU///////////////////////////
   ////////////////////////////////////////////////////////////////
   */
-
-  
 
   .navbar__chat-container {
     display: flex;
@@ -1844,9 +1852,9 @@ a[class*="fill-blue"]{
   ////////////////////////////////////////////////////////////////
   */
   
-  .footer {
-    background-color: white;
-    padding:20px 0;
+  footer {
+    background-color: rgba(255,245,212,0.5);
+    padding:50px 0;
   }
   .footer-inner{
     width:70%;
@@ -1885,6 +1893,17 @@ a[class*="fill-blue"]{
   .footer-nav-contact p{
     margin-bottom:15px;
   }
+  .footer-social-links{
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .footer-social-links a{
+    margin-right: 10px;
+  }
+  .footer-subfooter p,
+  .footer-subfooter a{
+    color:#767676;
+  }
 
   
   .footer__top-nav {
@@ -1898,18 +1917,12 @@ a[class*="fill-blue"]{
   .footer__nav-list a {
       text-decoration: none;
       text-transform: uppercase;
-      color: black;
       padding: 6px 0;
       font-weight: 600;
       border: 1px solid transparent;
       border-radius: 5px;
   }
   
-  .footer__nav-list a:hover,
-  .footer__nav-list a:focus {
-    text-decoration: underline;
-    color: #6495ed;
-  }
   
   .footer__nav-list-item-title-container {
     display: flex;
@@ -1969,91 +1982,49 @@ a[class*="fill-blue"]{
     background-color: transparent;
     cursor: pointer;
   }
+
   
-  .footer__nav-list-link-container {
-    list-style-type: none;
-  }
-  
-  .footer__nav-list-link-container li {
-    padding: 5px 0;
-  }
-  
-  
-  
-  .footer__nav-list-item-num {
-      margin: 15px 0;
-  }
-  
-  .footer__nav-list-store-hours {
-    color: black;
-    padding: 10px 2px;
-    width: 37%;
-    border: 1px solid transparent;
-    border-radius: 5px;
-  }
-  
-  .footer__nav-list-store-hours:hover,
-  .footer__nav-list-store-hours:focus {
-    text-decoration: underline;
-    color: #6495ed;
-  }
-  
-  .footer__copyright ul {
-    list-style-type: none;
-    color: black;
-  }
-  
-  .footer__copyright ul li {
+  .footer-copyright ul li {
     display: inline-block;
     font-size: 0.8125rem;
     padding: 5px 0;
   }
+ 
   
-  .footer__copyright ul li p {
+  .footer-copyright ul li p {
     padding: 0 10px;
     border-right: 1px solid black;
   }
   
-  .footer__copyright ul li a {
-    text-decoration: none;
-    color: black;
+  .footer-copyright ul li a {
     padding: 0 10px;
     border: 1px solid transparent;
     border-right: 1px solid black;
   }
   
-  .footer__copyright ul li a:hover,
-  .footer__copyright ul li a:focus {
-    text-decoration: underline;
-    color: #6495ed;
-  }
-  
-  .footer__copyright ul li:last-child a {
+  .footer-copyright ul li:last-child a {
     border-right: none;
   }
   
-  .footer__subfooter {
+  .footer-subfooter {
     padding-top: 30px;
     text-align: center;
   }
   
-  .footer__design-text {
+  .footer-design-text {
     padding: 10px 0 30px;
     font-size: 0.8125rem;
   }
   
   
-  .footer__design-text a {
-    color: black;
+  .footer-design-text a {
     border: 1px solid transparent;
     border-radius: 5px;
     padding: 2px;
   }
-  
-  .footer__design-text a:hover,
-  .footer__design-text a:focus {
-    text-decoration: underline;
-    color: #6495ed;
+  .footer-design-text a:hover,
+  .footer-design-text a:focus{
+    color:#59A7FF;
   }
   
   .footer__nav-list-show {

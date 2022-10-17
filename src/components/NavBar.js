@@ -1,5 +1,4 @@
 import React from 'react'
-import { ReactComponent as NavToggle } from '../images/navarrow.svg';
 
 function NavBar() {
 	const navList =[
