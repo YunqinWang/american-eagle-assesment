@@ -1,20 +1,12 @@
 import React from 'react'
 import TwoColTitle from './TwoColTitle'
-import ThreeColProduct from './ThreeColProduct'
+import ProductRow from './ProductRow'
 
-function TwoColTextProduct({title,color,product1, product2, product3}) {
-  console.log(color)
+function TwoColTextProduct({title,color,products}) {
   return (
     <section className = "two-col-text-product">
-        <TwoColTitle 
-          title={title} 
-          color={color}
-        />
-        <ThreeColProduct 
-          product1={product1} 
-          product2={product2} 
-          product3={product3}
-        />
+        <TwoColTitle title={title} color={color}/>
+        <ProductRow products = {products}/>
     </section>
   )
 }

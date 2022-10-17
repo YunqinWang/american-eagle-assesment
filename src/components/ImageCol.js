@@ -1,6 +1,6 @@
 import React from 'react'
 
-function TwoColImage({image, imageText,imageColor}) {
+function ImageCol({image, imageText,imageColor}) {
   return (
     <div className="two-col-image">
         <div className="two-col-image-inner" 
@@ -13,5 +13,4 @@ function TwoColImage({image, imageText,imageColor}) {
   )
 }
 
-export default TwoColImage
-//<img src={(image)}/>
+export default ImageCol

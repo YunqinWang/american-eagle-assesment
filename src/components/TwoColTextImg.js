@@ -1,11 +1,11 @@
 import React from 'react'
 import TwoColTitle from './TwoColTitle'
-import TwoColImage from './TwoColImage'
+import ImageCol from './ImageCol'
 
 function TwoColTextImg({title,image, textPosition,color}) {
     const twoColTitle = <TwoColTitle title={title}    
                                      color={color}/>
-    const twoColImage = <TwoColImage image={image.src} 
+    const twoColImage = <ImageCol image={image.src} 
                                      imageText={image.text} 
                                      imageColor={`two-col-image-${color}`}/>
 

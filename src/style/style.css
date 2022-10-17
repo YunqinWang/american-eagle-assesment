@@ -10,9 +10,11 @@
   }
   
   body {
-    background-color: #FAFAFA;
+    background-image: url("../images/leafpatterntall.jpg");
   }
-  
+  section{
+    margin: 0 0 50px 0;
+  }
   img {
       max-width: 100%;
   }
@@ -21,6 +23,10 @@
     text-decoration: none;
   }
 
+  h1{
+    font-size: 70px;
+    font-weight: 600;
+  }
   h2{
     font-size: 60px;
     font-weight: 600;
@@ -30,12 +36,15 @@
     font-weight: 600;
   }
   h4{
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 600;
   }
   h5{
     font-size: 25px;
     font-weight: 600;
+  }
+  li{
+    list-style: none;
   }
   .container {
     position: relative;
@@ -629,6 +638,9 @@ a[class*="fill-blue"]{
   //////////////////HERO SECTION STYLES///////////////////////////
   ////////////////////////////////////////////////////////////////
   */
+  .hero{
+    margin-bottom: 0;
+  }
   .hero__carousel-slide {
       position: relative;
   }
@@ -850,7 +862,7 @@ a[class*="fill-blue"]{
   }
   .product-item{
     display: inline-block;
-    width:33.3%;
+    flex: 1;
     box-sizing: border-box;
     padding: 10px;
   }
@@ -1019,10 +1031,9 @@ a[class*="fill-blue"]{
   //////////////////SHOPPING SECTION STYLES///////////////////////
   ////////////////////////////////////////////////////////////////
   */
-  
+ 
   section[class *="two-col"]{
     display: flex;
-    margin: 50px 0px;
     height:500px;
   }
   .two-col-red{
@@ -1333,6 +1344,112 @@ a[class*="fill-blue"]{
   ////////////////////////////////////////////////////////////////
   */
   
+
+  .image-row{
+    display: flex;
+    width:100%;
+    height:400px;
+  }
+  .image-item{
+    flex-grow: 1;
+    height:100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0px;
+  }
+  .offer-outer-row {
+    background-color: #FFF5D4;
+    padding: 50px 0px;
+  }
+  .offer-row-inner {
+    width:70%;
+    margin:auto;
+  }
+  .offer-row-title{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .offer-row-title h4{
+    margin-bottom: 15px;
+    color:#97813B;
+  }
+
+  .offer-row-title h5{
+    margin-bottom: 0x;
+    color:#767676;
+  }
+
+  .offer-row-offer-list{
+    display: flex;
+  }
+
+  .offer-item{
+    flex:1;
+    margin:10px;
+  }
+
+  .offer-item-icon-outer{
+    padding: 20px;
+    width:25%;
+    margin:auto;
+    background-color: #fafafa;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.03);
+  }
+  .offer-item-icon{
+    width:100%;
+    height:0;
+    padding-bottom: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  .offer-item-text{
+    margin: 30px 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .offer-item-text h4{
+    color:#ECBF2F;
+    padding-bottom: 10px;
+  }
+  .offer-item-text h5{
+    color:#767676;
+  }
+
+  .mission-outer{
+    background-color: #E6F3FF;
+    padding: 50px 0;
+  }
+  .mission-inner{
+    width:70%;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mission-inner h4{
+    margin-bottom: 30px;
+    color:#59A7FF;
+  }
+
+
+  .mission-inner p{
+    font-size: 20px;
+    color:#767676;
+  }
+
+  .mission-inner-signature{
+    margin-top: 40px;
+  }
+
   .mission__img-main-container {
     display: flex;
     flex-direction: column;
@@ -1440,10 +1557,86 @@ a[class*="fill-blue"]{
   //////////////////NEWSLETTER SECTION STYLES/////////////////////
   ////////////////////////////////////////////////////////////////
   */
+  .newsletter-outer{
+    background-color: #fff;
+    padding: 50px 0px;
+  }
+  .newsletter-inner{
+    width:70%;
+    margin:auto;
+    display: flex;
+  }
   
   .newsletter {
     position: relative;
     padding: 70px 0;
+  }
+  .newsletter-text{
+    width:60%;
+
+  }
+  .newsletter-text h3,
+  .newsletter-card h1{
+    color: #F25050;
+    margin-bottom: 20px;
+  }
+  .newsletter-text p{
+    color: #AC6161;
+    margin-bottom: 20px;
+  }
+  .newsletter-card h5{
+    color: #AC6161;
+    margin-bottom: 5px;
+  }
+
+  .newsletter-input {
+    border: none;
+    border: 1px solid transparent;
+    border-bottom: 1px solid black;
+    padding: 15px 10px;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .newsletter-email-svg-container {
+    display: flex;
+    justify-content: end;
+  }
+  
+  .newsletter-email-svg {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: -5px;
+    top: -70px;
+  }
+  
+  .newsletter-email-svg:focus {
+    display: none;
+  }
+
+  .newsletter-card{
+    width:40%;
+    margin-left: 100px;
+    box-sizing: border-box;
+    background-color: #FFEAEA;
+    border-radius: 8px;
+    padding: 15px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    position: relative;
+  }
+  .newsletter-card h1,
+  .newsletter-card h5{
+    display: inline-block;
+  }
+  .newsletter-card-saleTag{
+    width:12%;
+    display: inline-block;
+   
+    
   }
   
   .newsletter__background {
@@ -1506,22 +1699,7 @@ a[class*="fill-blue"]{
     width: 100%;
   }
   
-  .newsletter__email-svg-container {
-    display: flex;
-    justify-content: end;
-  }
   
-  .newsletter__email-svg {
-    width: 30px;
-    height: 30px;
-    position: relative;
-    left: -5px;
-    top: -45px;
-  }
-  
-  .newsletter__email-svg:focus {
-    display: none;
-  }
   
   .newsletter__hide-svg {
     fill: transparent;
@@ -1668,7 +1846,46 @@ a[class*="fill-blue"]{
   
   .footer {
     background-color: white;
+    padding:20px 0;
   }
+  .footer-inner{
+    width:70%;
+    margin:auto
+  }
+  .footer-nav-list,
+  .footer-nav{
+    display: flex;
+  }
+  .footer-nav-list{
+    width:60%;
+  }
+  .footer-nav-contact{
+    width:40%;
+    margin-left: 100px;
+    box-sizing: border-box;
+  }
+
+  .footer-list-col{
+    flex:1;
+  }
+  .footer-list-col-title{
+    color:#97813B;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .footer-list-col-item a,
+  .footer-nav-contact p,
+  .footer-nav-contact a{
+    color:#767676;
+    margin-bottom: 5px;
+    font-size: 20px;
+    text-transform: capitalize;
+  }
+  .footer-nav-contact p{
+    margin-bottom:15px;
+  }
+
   
   .footer__top-nav {
     padding: 50px 0;

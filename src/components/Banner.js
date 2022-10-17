@@ -17,8 +17,6 @@ function Banner() {
 
     function getSlideElement (slideImg, i, imgClassName){
         i = formatNum(i);
-        console.log(i);
-        console.log(slideImg[i]);
         return <img key={i} 
                     className = {imgClassName}
                     src={(`${slideImg[i].slide.src}`)} 
@@ -32,7 +30,6 @@ function Banner() {
         else setBtnClicked("prev");
         let slideNum = slideState + num;
         slideNum = formatNum(slideNum);
-        console.log(slideNum);
         setSlideState(slideNum);
         showCurr();
     }
@@ -47,7 +44,6 @@ function Banner() {
 
     function showCurr(){
         let toShow=[];
-        console.log(btnClicked)
         if(btnClicked == "next"){
             toShow.push(getSlideElement (slideImg, slideState-1, "slide-prev"));
             toShow.push(getSlideElement (slideImg, slideState, "slide-curr"));

@@ -1,7 +1,6 @@
 import React from 'react'
 
 function ProductItem({product}) {
-    console.log(product)
   return (
     <div className = "product-item">
         <div className = "product-item-inner">
