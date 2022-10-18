@@ -17,7 +17,7 @@ function TwoColTextImg({title,image, textPosition,color}) {
         </section>
     )
     else return(
-        <section className = {`two-col-${color}`}>
+        <section className = {`two-col-right-text two-col-${color}`}>
             {twoColImage}
             {twoColTitle}
         </section>

@@ -6,7 +6,7 @@ function ImageCol({image, imageText,imageColor}) {
         <div className="two-col-image-inner" 
             style={{backgroundImage:`url(${image})`}}>
             <div>
-                <h4 className={imageColor}>{imageText}</h4>
+                <h5 className={imageColor}>{imageText}</h5>
             </div>
         </div>
     </div>
