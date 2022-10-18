@@ -2,7 +2,7 @@ import React from 'react'
 
 function Button({btnStyle,btnText,btnLink=""}) {
   return (
-    <div>
+    <div className="btn">
       <a className={btnStyle} href={btnLink}>
           {btnText}
       </a>

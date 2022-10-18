@@ -57,12 +57,10 @@ function FooterNav() {
 			</li>
 		)
 	})
-    
-    
 
     return (
-        <div className = "footer-nav">
-            <ul className = "footer-nav-list">
+        <div className = "flex-box">
+            <ul className = "flex-box footer-nav-list">
                 {footerItems}
             </ul>
         </div>
