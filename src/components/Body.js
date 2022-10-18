@@ -6,10 +6,13 @@ import ImageRow from './ImageRow';
 import OfferRow from './OfferRow';
 import Mission from './Mission';
 import NewsLetter from './NewsLetter';
+import FloatIcon from './FloatIcon';
 
 function Body() {
   return (
     <div>
+        <FloatIcon icon={{src:require("../images/chat.svg").default}} />
+
         <Banner />
 
         <TwoColTextProduct 

@@ -1,41 +1,42 @@
-import React from 'react'
+import React,{useState} from 'react'
 import NavBar from './NavBar'
 import Button from './Button';
 import { ReactComponent as LogoSvg } from '../images/logo.svg';
 import { ReactComponent as ShoppingBagSvg } from '../images/shoppingbag.svg';
 
 function Header() {
-	const btnText = "123"
+  const [searchItem, setSearchItem] =useState("");
+  const [searchResult, setSearchResult] =useState("hide");
+  const handleSearch =(item)=>{
+	setSearchItem(item);
+	if(item !="")
+	setSearchResult("show");
+  }
+
   return (
     <header class="site-header" id="site-header" role="banner">
 				<div class="container">
-					<nav class="navbar__main">
-						<div class="navbar__main-container">
-							<div className="navbar__logo-container">
-								<LogoSvg width="400px"/>
+					<nav class="navbar-main">
+						<div class="navbar-main-container">
+							<div className="navbar-logo-container">
+								<LogoSvg width="300px"/>
 							</div>
-							<div className="navbar__btn-container">
-								<Button btnStyle={"btn-frame-red"}  btnText={"Contact"}/>
-								<Button btnStyle={"btn-fill-red"} btnText={"Login"}/>
+							<div className="navbar-btn-container">
+								<Button btnStyle={"btn-frame-red"}  btnText={"Contact"} btnSize="small"/>
+								<Button btnStyle={"btn-fill-red"} btnText={"Login"} btnSize="small"/>
 							</div>
-							<div class="navbar__cart-link-container">
-								<a href="#" className="navbar__cart-link">
+							<div class="navbar-cart-link-container">
+								<a href="#" className="navbar-cart-link">
 									<ShoppingBagSvg width="45px" height="45px"/>
-									<div class="navbar__cart-num">5</div>
+									<div class="navbar-cart-num">5</div>
 								</a>
-							</div>
-							
-							<div class="navbar__cart-container">
-								<div class="navbar__inner-cart-container">
-									<div class="navbar__search-link-container">
-										<a href="#" class="navbar__search-link navbar__link navbar__mobile-search-link navbar__search-svg">
-										</a>
-									</div>
-								</div>
 							</div>
 						</div>
 
-						<NavBar/>
+						<NavBar handleSearch = {handleSearch}/>
+						<div className ={`search-result ${searchResult}`}>
+							<p>Search Result: <b>{searchItem}</b></p>
+						</div>
 					</nav>
 				</div>
             </header>

@@ -1,6 +1,10 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
+import { ReactComponent as Search } from '../images/search.svg';
+import { ReactComponent as Close } from '../images/close.svg';
+import Button from './Button';
 
-function NavBar() {
+function NavBar({handleSearch}) {
+	//nav bar list
 	const navList =[
 		{NavItem:{
 			name: "Baby Apparel",
@@ -34,53 +38,101 @@ function NavBar() {
 
 	let navItems = navList.map(item=>{
 		return(
-			<li class="navbar__menu-list-item" key = {item.NavItem.name}>
+			<li class="navbar-menu-list-item" key = {item.NavItem.name}>
 				<a href={item.NavItem.link}>{item.NavItem.name}</a>
-				<img src={require("../images/navarrow.svg").default} class="navbar__menu-list-item-svg" />
+				<img src={require("../images/navarrow.svg").default} class="navbar-menu-list-item-svg" />
 			</li>
 		)
 	})
+
+	//search icon change color during searhcing
+	const [typein, setTypein] =useState ("");
+	const [search,setSearch] = useState (false);
+	const [searchColor,setSearchColor] = useState ("#F25050")
+	const [loadingSign,setLoadingSign] = useState ("hide-hidden");
+	const [expandNav, setExpandNav] =useState ("navbar-menu");
+
+	function searching(){
+		setSearch(true); 
+		setLoadingSign("show-hidden");
+		setSearchColor("#133D6B");
+	}
+
+	//mock up waiting for searching results
+	useEffect(() => {
+		const timeout = setTimeout(() => {
+		   setSearch(false);
+		   setLoadingSign("hide-hidden");
+		   setSearchColor("#F25050");
+		   handleSearch(typein);
+		 }, 2000);
+	 
+		return () => clearTimeout(timeout);
+	   },[search]);
+
+	
   	return (
-		<div class="navbar__menu">
-			<ul class="navbar__menu-list">
-				
-				<li class="navbar__menu-list-item navbar__mobile-close-item">
-					<button class="navbar__mobile-close-btn">
-						<img src={require("../images/close.svg").default} />
-					</button>
-				</li>
-				{navItems}
-				
-				<li class="navbar__menu-list-item">
-					<div class="navbar__mobile-newsletter-card">
-						<div class="navbar__mobile-newsletter-container-inner">
-							<div class="navbar__mobile-newsletter-signup">
-								<h2 class="navbar__mobile-newsletter-signup-title">
-									Newsletter
-								</h2>
-								<h3 class="navbar__mobile-newsletter-signup-subtitle">
-									Sign-Up
-								</h3>
-								<div class="navbar__mobile-newsletter-input-container">
-									<label for="mobile__email" class="navbar__mobile-newsletter-input-label"></label>
-									<input type="email" id="mobile__email" placeholder="Your Email" class="navbar__mobile-newsletter-input" />
-									<div class="navbar__mobile-newsletter-email-svg-container">
-											<img src="assets/images/email.svg" class="navbar__mobile-newsletter-email-svg" />
+		<div className = "navbar-menu-all">
+			<button className="navbar-hamburger" onClick={()=>setExpandNav("navbar-menu-show")}>
+				<div className="navbar-hamburger-bar"></div>
+				<div className="navbar-hamburger-bar"></div>
+				<div className="navbar-hamburger-bar"></div>
+			</button>
+			<div className={expandNav}>
+				<ul class="navbar-menu-list">
+					
+					<li class="navbar-menu-list-item navbar-mobile-close-item">
+						<button class="navbar-mobile-close-btn"
+							onClick={()=>setExpandNav("navbar-menu")}>
+							<Close stroke="#000" />
+						</button>
+					</li>
+					{navItems}
+					<li className="navbar-search">
+						<div className="navbar-search-inner" >
+							<input class="navbar-input" type="text" name="navbar-input" id="navbar-input" placeholder="Search..." onChange={e=>{
+								setTypein(e.target.value);
+							}}/>
+							<button onClick = {searching} style={{border:`${searchColor} 2px solid`}}> 
+								<Search stroke={searchColor} stroke-width="3" width="20" height="20"/> 
+							</button>
+							<div className={`lds-ring ${loadingSign}`}>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
+						</div>
+					</li>
+					
+					<li class="navbar-menu-list-item">
+						<div class="navbar-mobile-newsletter-card">
+							<div class="navbar-mobile-newsletter-container-inner">
+								<div class="navbar-mobile-newsletter-signup">
+									<h2>Newsletter</h2>
+									<h3>Sign-Up</h3>
+									<div class="navbar-mobile-newsletter-input-container">
+										<label for="mobile__email"
+												class="navbar-mobile-newsletter-input-label">
+										</label>
+										<input type="email" 
+												id="mobile__email" 
+												placeholder="Your Email" 
+												class="navbar-mobile-newsletter-input" 
+										/>
+										<div class="navbar-mobile-newsletter-email-svg-container">
+											<img src={require("../images/email.svg").default} class="navbar-mobile-newsletter-email-svg" />
+										</div>
 									</div>
-								</div>
-								<div class="navbar__mobile-newsletter-button-container">
-									<button class="navbar__mobile-newsletter-button">
-										Sign Me Up!
-									</button>
+									<div class="navbar-mobile-newsletter-button-container">
+										<Button btnStyle={"btn-fill-yellow"}  btnText={"Sign Me Up!"}/>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				</li>
-			</ul>
-			<div class="navbar__search">
-				<input class="navbar__input" type="text" name="navbar__input" id="navbar__input" placeholder="Search..." />
-				<button>Search</button>
+					</li>
+				</ul>
+				
 			</div>
 		</div>
   )
