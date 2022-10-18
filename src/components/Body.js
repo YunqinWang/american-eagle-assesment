@@ -13,6 +13,7 @@ function Body() {
         <Banner />
 
         <TwoColTextProduct 
+          type ="product"
           title = {{
             description:{ subtitle: "This Month", title:"Featured Products"},
             btn: {style:"btn-fill-blue", text:"View All"}
@@ -38,6 +39,7 @@ function Body() {
         />
 
         <TwoColTextImg
+          type ="image"
           title = {{
             description:{ subtitle: "Sleep Tight", title:"Crib Bedding"},
             btn: {style:"btn-fill-yellow", text:"Shop bedding"}
@@ -51,6 +53,7 @@ function Body() {
         />
 
         <TwoColTextImg
+          type ="image"
           title = {{
             description:{subtitle: "Cozy comfortable", title:"Children’s Firniture"},
             btn: {style:"btn-fill-red", text:"Shop Furniture"},

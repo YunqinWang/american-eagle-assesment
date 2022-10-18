@@ -4,7 +4,7 @@ import ProductRow from './ProductRow'
 
 function TwoColTextProduct({title,color,products}) {
   return (
-    <section className = "two-col-text-product">
+    <section className = "two-col-text-product flex-box">
         <TwoColTitle title={title} color={color}/>
         <ProductRow products = {products}/>
     </section>

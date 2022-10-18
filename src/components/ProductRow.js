@@ -6,7 +6,7 @@ function ProductRow({products}) {
     return <ProductItem key={i} product={item.product} />
   })
   return (
-    <div className= "three-col-product">
+    <div className= "three-col-product flex-box">
         {productRow}
     </div>
   )
