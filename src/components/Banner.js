@@ -59,22 +59,22 @@ function Banner() {
 
   return (
     <section class="hero">
-        <div class="hero__carousel" id="hero__carousel">
-            <div class="hero__carousel-slide">
-                <div class="hero__carousel-img">
+        <div class="hero-carousel" id="hero-carousel">
+            <div class="hero-carousel-slide">
+                <div class="hero-carousel-img">
                     <div>{ showCurr()}</div>
-                    <button className="hero__carousel-leftArr"
+                    <button className="hero-carousel-leftArr"
                             onClick={()=>slideNum(-1)}
                             >
                         <NavArrow width="20px"/>
                     </button>
-                    <button className="hero__carousel-rightArr"
+                    <button className="hero-carousel-rightArr"
                             onClick={()=>slideNum(1)}
                         >
                         <NavArrow width="20px"/>
                     </button>
                 </div>
-                <div class="hero__outter-text-container">
+                <div class="hero-outter-text-container">
                     <BannerAd/>
                 </div>
             </div>
