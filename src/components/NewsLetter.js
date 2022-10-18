@@ -5,8 +5,8 @@ import { ReactComponent as SaleNum }  from '../images/percent.svg'
 
 function NewsLetter() {
   return (
-    <section className='newsletter-outer'>
-        <div className='newsletter-inner'>
+    <section className='newsletter-outer container-outer'>
+        <div className='container-inner'>
             <h3 className='newsletter-title'>Newsletter</h3>
             <div  className='flex-box'>
                 <div className='newsletter-text'>

@@ -72,6 +72,13 @@ li{
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+.container-outer{
+ padding: 50px 0px;
+}
+.container-inner{
+  width:70%;
+  margin:auto;
+}
 
 .flex-box{
   display: flex;
@@ -113,10 +120,18 @@ li{
   h1{
     font-size: 60px;
   }
+  h4{
+    font-size: 35px;
+  }
   .flex-box{
     display: block;
-  }    
+  } 
+}
 
+@media screen and (max-width: 768px) {
+  .container-inner{
+    width:75%;
+  }
 }
 
 /* 
@@ -1376,219 +1391,166 @@ a[class*="fill-blue"]{
   ////////////////////////////////////////////////////////////////
   */
   
-  /* 
-  ////////////////////////////////////////////////////////////////
-  //////////////////MISSION SECTION STYLES////////////////////////
-  ////////////////////////////////////////////////////////////////
-  */
-  
+/* 
+////////////////////////////////////////////////////////////////
+//////////////////MISSION SECTION STYLES////////////////////////
+////////////////////////////////////////////////////////////////
+*/
 
+/* 
+/////////////////////
+//////image row//////
+/////////////////////
+*/
+.image-row{
+  display: flex;
+  width:100%;
+  height:400px;
+}
+
+.image-item{
+  flex-grow: 1;
+  height:100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0px;
+}
+
+@media screen and (max-width: 768px){
   .image-row{
-    display: flex;
-    width:100%;
-    height:400px;
+    display: block;
   }
+
   .image-item{
-    flex-grow: 1;
-    height:100%;
-    background-size: cover;
-    background-position: center;
-    border-radius: 0px;
-  }
-  .offer-outer-row {
-    background-color: #FFF5D4;
-    padding: 50px 0px;
-  }
-  .offer-row-inner {
-    width:70%;
-    margin:auto;
-  }
-  .offer-row-title{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 30px;
+    height:50%;
   }
 
-  .offer-row-title h4{
-    margin-bottom: 15px;
-    color:#97813B;
+  .image-item:first-child{
+    margin-bottom: 5px;
   }
+}
 
-  .offer-row-title h5{
-    margin-bottom: 0x;
-    color:#767676;
-  }
+/* 
+/////////////////////
+/////// offers //////
+/////////////////////
+*/
+.offer-outer {
+  background-color: #FFF5D4;
+}
 
-  .offer-row-offer-list{
-    display: flex;
+.offer-row-title{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.offer-row-title h4{
+  margin-bottom: 15px;
+  color:#97813B;
+  text-align: center;
+}
+
+.offer-row-title h5{
+  margin-bottom: 0x;
+  color:#767676;
+  text-align: center;
+}
+
+.offer-item{
+  flex:1;
+  margin:10px;
+}
+
+.offer-item-icon-outer{
+  padding: 20px;
+  width:25%;
+  margin:auto;
+  background-color: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.03);
+}
+
+.offer-item-icon{
+  width:100%;
+  height:0;
+  padding-bottom: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.offer-item-text{
+  margin: 30px 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.offer-item-text h4{
+  color:#ECBF2F;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.offer-item-text h5{
+  color:#767676;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px){
+  .offer-item-icon-outer{
+    padding: 15px;
   }
 
   .offer-item{
-    flex:1;
-    margin:10px;
-  }
-
-  .offer-item-icon-outer{
+    background-color: rgba(255, 255, 255, 0.4);
     padding: 20px;
-    width:25%;
-    margin:auto;
-    background-color: #fafafa;
     border-radius: 8px;
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.03);
+    margin: 20px 0;
   }
-  .offer-item-icon{
-    width:100%;
-    height:0;
-    padding-bottom: 100%;
-    background-size: cover;
-    background-position: center;
-  }
+
   .offer-item-text{
-    margin: 30px 0;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 0;
   }
-  .offer-item-text h4{
-    color:#ECBF2F;
-    padding-bottom: 10px;
-  }
-  .offer-item-text h5{
-    color:#767676;
-  }
+}
 
-  .mission-outer{
-    background-color: #E6F3FF;
-    padding: 50px 0;
-  }
-  .mission-inner{
-    width:70%;
-    margin:auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+/* 
+/////////////////////
+////// mission //////
+/////////////////////
+*/
+.mission-outer{
+  background-color: #E6F3FF;
+}
 
-  .mission-inner h4{
-    margin-bottom: 30px;
-    color:#59A7FF;
-  }
+.mission-inner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.mission-inner h4{
+  margin-bottom: 30px;
+  color:#59A7FF;
+}
 
-  .mission-inner p{
-    font-size: 20px;
-    color:#767676;
-  }
+.mission-inner p{
+  font-size: 20px;
+  color:#767676;
+}
 
-  .mission-inner-signature{
-    margin-top: 40px;
-  }
-
-  .mission__img-main-container {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .mission__img-container {
-    padding: 10px 0;
-    margin-right: 15px;
-    border-radius: 0 8px 8px 0;
-  }
-  
-  .mission__img-container:last-child {
-      margin: 0 0 0 15px;
-      border-radius: 8px 0 0 8px;
-  }
-  
-  .mission__img {
-    background-image: url("../images/welovebabies-left.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    min-height: 240px;
-    border-radius: 0 8px 0 0;
-  }
-  
-  .mission__inner-img-container-alt {
-    margin-right: 0;
-    margin-left: 15px;
-    border-radius: 8px 0 0 0;
-  }
-  
-  .mission__img-alt {
-    background-image: url("../images/welovebabies-right.png");
-    border-radius: 15px 0 0 0;
-  }
-  
-  .mission h2 {
-    font-size: 2.25rem;
-    font-weight: 400;
-    padding-top: 35px;
-    text-align: center;
-  }
-  
-  .mission__graphic {
-    padding-top: 20px;
-    text-align: center;
-  }
-  
-  .mission__text-container {
-    text-align: center;
-    font-size: 1.125rem;
-    font-weight: 600;
-    margin: 0 auto;
-    padding: 20px;
-    line-height: 1.9;
-  }
-  
-  .mission__signature-container {
-    padding: 20px 0;
-    text-align: center;
-  }
-  
-  .mission__signature {
-    height: 50px;
-  }
-  
-  @media (min-width: 768px) {
-  
-    .mission__img {
-      min-height: 350px;
-    }
-  
-  }
-  
-  @media (min-width: 1024px) {
-    .mission__img-main-container {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-  
-    .mission__img-container {
-      width: 50%;
-    }
-  
-    .mission__img {
-      min-height: 570px;
-    }
-  
-    .mission h2 {
-      font-size: 2.5rem;
-    }
-  }
-  
-  
-  
-  /* 
-  ////////////////////////////////////////////////////////////////
-  ////////////////////////////////////////////////////////////////
-  ////////////////////////////////////////////////////////////////
-  */
+.mission-inner-signature{
+  margin-top: 40px;
+}
+/* 
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+*/
   
 /* 
 ////////////////////////////////////////////////////////////////
@@ -1597,11 +1559,7 @@ a[class*="fill-blue"]{
 */
 .newsletter-outer{
   background-color: #fff;
-  padding: 50px 0px;
-}
-.newsletter-inner{
-  width:70%;
-  margin:auto;
+  
 }
 
 /* 

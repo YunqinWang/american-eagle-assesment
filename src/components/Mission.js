@@ -2,8 +2,8 @@ import React from 'react'
 
 function Mission() {
   return (
-    <section className = "mission-outer">
-        <div className = "mission-inner">
+    <section className = "container-outer mission-outer">
+        <div className = "container-inner mission-inner">
             <h4>We Love Babies</h4>
             <p>
                 Beautiful Beginnings offers finely crafted baby cribs as well as complete suites of nursery furniture, from traditional to contemporary. All the finest names in crib bedding and baby blankets are featured with

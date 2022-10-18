@@ -53,7 +53,7 @@ function NavBar() {
 				
 				<li class="navbar__menu-list-item">
 					<div class="navbar__mobile-newsletter-card">
-						<div class="navbar__mobile-newsletter-inner-container">
+						<div class="navbar__mobile-newsletter-container-inner">
 							<div class="navbar__mobile-newsletter-signup">
 								<h2 class="navbar__mobile-newsletter-signup-title">
 									Newsletter

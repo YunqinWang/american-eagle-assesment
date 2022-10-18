@@ -17,13 +17,13 @@ function OfferRow({offers}) {
         )
     })
   return (
-    <section className='offer-outer-row'>
-        <div className='offer-row-inner'>
+    <section className='container-outer offer-outer'>
+        <div className='container-inner'>
             <div className='offer-row-title'>
                 <h4>Beatiful Beginnings</h4>
                 <h5>Customer Benifits</h5>
             </div>
-            <ul className='offer-row-offer-list'> 
+            <ul className='flex-box'> 
                 {offerRow}
             </ul>
         </div>
