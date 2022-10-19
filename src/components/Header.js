@@ -14,10 +14,10 @@ function Header() {
   }
 
   return (
-    <header class="site-header" id="site-header" role="banner">
-				<div class="container">
-					<nav class="navbar-main">
-						<div class="navbar-main-container">
+    <header className="site-header" id="site-header" role="banner">
+				<div className="container">
+					<nav className="navbar-main">
+						<div className="navbar-main-container">
 							<div className="navbar-logo-container">
 								<LogoSvg />
 							</div>
@@ -25,10 +25,10 @@ function Header() {
 								<Button btnStyle={"btn-frame-blue"}  btnText={"Contact"} btnSize="small"/>
 								<Button btnStyle={"btn-fill-blue"} btnText={"Login"} btnSize="small"/>
 							</div>
-							<div class="navbar-cart-link-container">
+							<div className="navbar-cart-link-container">
 								<a href="#" className="navbar-cart-link">
 									<ShoppingBagSvg width="45px" height="45px"/>
-									<div class="navbar-cart-num">5</div>
+									<div className="navbar-cart-num">5</div>
 								</a>
 							</div>
 						</div>

@@ -38,7 +38,6 @@ function Banner() {
     function formatNum(slideNum){
         if(slideNum<0) slideNum =slideNum + slideImg.length;
         slideNum = slideNum % slideImg.length;
-        
         return slideNum;
     }
 
@@ -61,10 +60,10 @@ function Banner() {
     let dots = slideImg.map((d,i)=>{return <button key={i} onClick = {()=>setSlideState(i)}> </button>})
 
   return (
-    <section class="hero">
-        <div class="hero-carousel" id="hero-carousel">
-            <div class="hero-carousel-slide">
-                <div class="hero-carousel-img">
+    <section className="hero">
+        <div className="hero-carousel" id="hero-carousel">
+            <div className="hero-carousel-slide">
+                <div className="hero-carousel-img">
                     <div>{ showCurr()}</div>
                     <button className="hero-carousel-leftArr"
                             onClick={()=>slideNum(-1)}
@@ -80,7 +79,7 @@ function Banner() {
                         {dots}
                     </div>
                 </div>
-                <div class="hero-outter-text-container">
+                <div className="hero-outter-text-container">
                     <BannerAd/>
                 </div>
             </div>

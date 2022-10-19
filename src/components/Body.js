@@ -11,7 +11,7 @@ import FloatIcon from './FloatIcon';
 function Body() {
   return (
     <div>
-        <FloatIcon icon={{src:require("../images/chat.svg").default}} />
+        <FloatIcon icon={{src:require("../images/chat.svg").default, name:"Chat icon"}} />
 
         <Banner />
 

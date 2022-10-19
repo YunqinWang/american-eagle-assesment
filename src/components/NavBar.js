@@ -39,9 +39,11 @@ function NavBar({handleSearch}) {
 
 	let navItems = navList.map(item=>{
 		return(
-			<li class="navbar-menu-list-item" key = {item.NavItem.name}>
+			<li className="navbar-menu-list-item" key = {item.NavItem.name}>
 				<a href={item.NavItem.link}>{item.NavItem.name}</a>
-				<img src={require("../images/navarrow.svg").default} class="navbar-menu-list-item-svg" />
+				<img src={require("../images/navarrow.svg").default}
+					className="navbar-menu-list-item-svg" 
+					alt="Menu list item icon"/>
 			</li>
 		)
 	})
@@ -80,10 +82,10 @@ function NavBar({handleSearch}) {
 					<div className="navbar-hamburger-bar"></div>
 					<div className="navbar-hamburger-bar"></div>
 				</button>
-				<div class="navbar-cart-link-container-mobile">
+				<div className="navbar-cart-link-container-mobile">
 					<a href="#" className="navbar-cart-link">
 						<ShoppingBagSvg width="45px" height="45px"/>
-						<div class="navbar-cart-num">5</div>
+						<div className="navbar-cart-num">5</div>
 					</a>
 				</div>
 				<div className="navbar-btn-container-mobile">
@@ -92,10 +94,9 @@ function NavBar({handleSearch}) {
 				</div>
 			</div>
 			<div className={expandNav}>
-				<ul class="navbar-menu-list">
-					
-					<li class="navbar-menu-list-item navbar-mobile-close-item">
-						<button class="navbar-mobile-close-btn"
+				<ul className="navbar-menu-list">
+					<li className="navbar-menu-list-item navbar-mobile-close-item">
+						<button className="navbar-mobile-close-btn"
 							onClick={()=>setExpandNav("navbar-menu")}>
 							<Close stroke="#000" />
 						</button>
@@ -103,11 +104,17 @@ function NavBar({handleSearch}) {
 					{navItems}
 					<li className="navbar-search">
 						<div className="navbar-search-inner" >
-							<input class="navbar-input" type="text" name="navbar-input" id="navbar-input" placeholder="Search..." onChange={e=>{
-								setTypein(e.target.value);
-							}}/>
+							<input className="navbar-input" 
+								type="text" 
+								name="navbar-input" 
+								id="navbar-input" 
+								placeholder="Search..." 
+								onChange={e=>{
+									setTypein(e.target.value);
+								}}
+							/>
 							<button onClick = {searching} style={{border:`${searchColor} 2px solid`}}> 
-								<Search stroke={searchColor} stroke-width="3" width="20" height="20"/> 
+								<Search stroke={searchColor} strokeWidth="3" width="20" height="20"/> 
 							</button>
 							<div className={`lds-ring ${loadingSign}`}>
 								<div></div>
@@ -118,26 +125,24 @@ function NavBar({handleSearch}) {
 						</div>
 					</li>
 					
-					<li class="navbar-menu-list-item">
-						<div class="navbar-mobile-newsletter-card">
-							<div class="navbar-mobile-newsletter-container-inner">
-								<div class="navbar-mobile-newsletter-signup">
+					<li className="navbar-menu-list-item">
+						<div className="navbar-mobile-newsletter-card">
+							<div className="navbar-mobile-newsletter-container-inner">
+								<div className="navbar-mobile-newsletter-signup">
 									<h2>Newsletter</h2>
 									<h3>Sign-Up</h3>
-									<div class="navbar-mobile-newsletter-input-container">
-										<label for="mobile__email"
-												class="navbar-mobile-newsletter-input-label">
-										</label>
+									<div className="navbar-mobile-newsletter-input">
+										<label htmlFor="mobile-email"></label>
 										<input type="email" 
-												id="mobile__email" 
-												placeholder="Your Email" 
-												class="navbar-mobile-newsletter-input" 
+												id="mobile-email" 
+												placeholder="Your Email"  
 										/>
-										<div class="navbar-mobile-newsletter-email-svg-container">
-											<img src={require("../images/email.svg").default} class="navbar-mobile-newsletter-email-svg" />
+										<div className="navbar-mobile-newsletter-email-svg-container">
+											<img src={require("../images/email.svg").default} className="navbar-mobile-newsletter-email-svg"
+											alt="Newsletter email icon" />
 										</div>
 									</div>
-									<div class="navbar-mobile-newsletter-button-container">
+									<div className="navbar-mobile-newsletter-button-container">
 										<Button btnStyle={"btn-fill-yellow"}  btnText={"Sign Me Up!"}/>
 									</div>
 								</div>
@@ -145,7 +150,6 @@ function NavBar({handleSearch}) {
 						</div>
 					</li>
 				</ul>
-				
 			</div>
 		</div>
   )

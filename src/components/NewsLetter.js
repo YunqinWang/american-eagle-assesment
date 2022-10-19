@@ -12,10 +12,15 @@ function NewsLetter() {
                 <div className='newsletter-text'>
                     <h4>Sign Up!</h4>
                     <p>Get the latest promotions and special offers delivered directly to your inbox!</p>
-                    <label for="email"></label>
-        			<input type="email" id="email" placeholder="Your Email" class="newsletter-input" />
-                    <div class="newsletter-email-svg-container">
-    					<img src={require("../images/email.svg").default} class="newsletter-email-svg" />
+                    <label htmlFor="email"></label>
+        			<input type="email" 
+                            id="email" 
+                            placeholder="Your Email" 
+                            className="newsletter-input" 
+                    />
+                    <div className="newsletter-email-svg-container">
+    					<img src={require("../images/email.svg").default}       
+                            className="newsletter-email-svg" />
     				</div>
                     <Button btnStyle="btn-fill-red" btnText= "Sign Me Up!"/>
                 </div>

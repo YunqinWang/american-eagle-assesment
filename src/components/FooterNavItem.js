@@ -31,10 +31,9 @@ function FooterNavItem({footerCol}) {
         {social:{name:"twitter" ,link:"#",svg:require("../images/twitter.svg").default}},
     ]
     let socialLink = links.map(item=>{
-        console.log(item.social.name);
         return(
             <a key={item.social.name}>
-                <img src={item.social.svg} alt={item.social.name}/>
+                <img src={item.social.svg} alt={`${item.social.name} link`}/>
             </a>
         )
     })
@@ -68,7 +67,7 @@ function FooterNavItem({footerCol}) {
                 <button onClick={()=>setExpand(!expand)} className={expandClass}>+</button> 
                 <button onClick={()=>setExpand(!expand)} className={collapseClass}>-</button>
             </ul>
-            {innerLink}
+            <ul>{innerLink}</ul>
     </div>
   )
 }
