@@ -16,18 +16,18 @@ function FooterCopyRight() {
     })
 
     return (
-        <div class="footer-subfooter">
-            <div class="footer-copyright">
+        <div className="footer-subfooter">
+            <div className="footer-copyright">
                 <ul>
                     <li><p><span>&copy;</span>2022 Beautiful Beginnings. All Rights Reserved</p></li>
                     {footerList}
                 </ul>
             </div>
-            <div class="footer-design-text">
+            <div className="footer-design-text">
                 <p>Designed and developed by <a href="#">americaneagle.com</a></p>
             </div>
             <div>
-                <img src={require("../images/logo.svg").default} />
+                <img src={require("../images/logo.svg").default} alt="AmericanEagle Logo"/>
             </div>
         </div>
     )
