@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/american-eagle-assesment/static/css/main.a5d78044.css",
+    "main.js": "/american-eagle-assesment/static/js/main.5228d965.js",
+    "static/media/cribbedding.png": "/american-eagle-assesment/static/media/cribbedding.4f2d41ebfa5cf19387ea.png",
+    "static/media/welovebabies-left.png": "/american-eagle-assesment/static/media/welovebabies-left.5197c6400d0ef18671a2.png",
+    "static/media/furniture.png": "/american-eagle-assesment/static/media/furniture.8ef2938a1f8436247dca.png",
+    "static/media/welovebabies-right.png": "/american-eagle-assesment/static/media/welovebabies-right.e861c161ae2baf14589f.png",
+    "static/media/slide2.png": "/american-eagle-assesment/static/media/slide2.760ce4d7372188978f08.png",
+    "static/media/slide1.png": "/american-eagle-assesment/static/media/slide1.f0990da8b19bec4d7ba1.png",
+    "static/media/slide3.png": "/american-eagle-assesment/static/media/slide3.d570a29c04e581f6c239.png",
+    "static/media/signature.svg": "/american-eagle-assesment/static/media/signature.fe3ef85442062a2a090b592ecd7c6d11.svg",
+    "static/media/logo.svg": "/american-eagle-assesment/static/media/logo.e1d3e97a1c1c48c1130b27a9c517feae.svg",
+    "static/media/barlow-medium-webfont.woff": "/american-eagle-assesment/static/media/barlow-medium-webfont.19ec6c65368db9f87b8c.woff",
+    "static/media/leafpatterntall.jpg": "/american-eagle-assesment/static/media/leafpatterntall.5f6e18314a065a52324c.jpg",
+    "static/media/fox.jpg": "/american-eagle-assesment/static/media/fox.2c3c8ea225aa29ad70a2.jpg",
+    "static/media/elephantsleeper.jpg": "/american-eagle-assesment/static/media/elephantsleeper.9139c9c87225ffc59ca8.jpg",
+    "static/media/percent.svg": "/american-eagle-assesment/static/media/percent.00d092b91f37b76e6ffa91b0334a1b4b.svg",
+    "static/media/instagram.svg": "/american-eagle-assesment/static/media/instagram.bb806eeb0fee8f9a344fb86376bd713a.svg",
+    "static/media/sale-tag.svg": "/american-eagle-assesment/static/media/sale-tag.0f9b4bba0147a607333c33b7c757b7bb.svg",
+    "static/media/tiktok.svg": "/american-eagle-assesment/static/media/tiktok.e0210169696f8ecd14376524e7b49f15.svg",
+    "static/media/twitter.svg": "/american-eagle-assesment/static/media/twitter.e0210169696f8ecd14376524e7b49f15.svg",
+    "static/media/email.svg": "/american-eagle-assesment/static/media/email.bd33d8f9033477ce5c9b948474fe69ef.svg",
+    "static/media/shoppingbag.svg": "/american-eagle-assesment/static/media/shoppingbag.76f8ae76ed474f4ad2c8c3b4325c8d45.svg",
+    "static/media/chat.svg": "/american-eagle-assesment/static/media/chat.2908eefc21375cedd485eeeeff3eedf1.svg",
+    "static/media/facebook.svg": "/american-eagle-assesment/static/media/facebook.8033d1d17f7485901602e3cac09380e7.svg",
+    "static/media/search.svg": "/american-eagle-assesment/static/media/search.30489bc3382272665cfc2d4187e3cb28.svg",
+    "static/media/navarrow.svg": "/american-eagle-assesment/static/media/navarrow.0718816ea86c55c4b43d132eb5126ed2.svg",
+    "static/media/close.svg": "/american-eagle-assesment/static/media/close.b0754dcb31e5aaa3eaeed878ee8133cc.svg",
+    "index.html": "/american-eagle-assesment/index.html",
+    "main.a5d78044.css.map": "/american-eagle-assesment/static/css/main.a5d78044.css.map",
+    "main.5228d965.js.map": "/american-eagle-assesment/static/js/main.5228d965.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a5d78044.css",
+    "static/js/main.5228d965.js"
+  ]
+}
