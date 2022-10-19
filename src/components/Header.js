@@ -19,11 +19,11 @@ function Header() {
 					<nav class="navbar-main">
 						<div class="navbar-main-container">
 							<div className="navbar-logo-container">
-								<LogoSvg width="300px"/>
+								<LogoSvg />
 							</div>
 							<div className="navbar-btn-container">
-								<Button btnStyle={"btn-frame-red"}  btnText={"Contact"} btnSize="small"/>
-								<Button btnStyle={"btn-fill-red"} btnText={"Login"} btnSize="small"/>
+								<Button btnStyle={"btn-frame-blue"}  btnText={"Contact"} btnSize="small"/>
+								<Button btnStyle={"btn-fill-blue"} btnText={"Login"} btnSize="small"/>
 							</div>
 							<div class="navbar-cart-link-container">
 								<a href="#" className="navbar-cart-link">

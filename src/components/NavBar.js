@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import { ReactComponent as Search } from '../images/search.svg';
 import { ReactComponent as Close } from '../images/close.svg';
+import { ReactComponent as ShoppingBagSvg } from '../images/shoppingbag.svg';
 import Button from './Button';
 
 function NavBar({handleSearch}) {
@@ -73,11 +74,23 @@ function NavBar({handleSearch}) {
 	
   	return (
 		<div className = "navbar-menu-all">
-			<button className="navbar-hamburger" onClick={()=>setExpandNav("navbar-menu-show")}>
-				<div className="navbar-hamburger-bar"></div>
-				<div className="navbar-hamburger-bar"></div>
-				<div className="navbar-hamburger-bar"></div>
-			</button>
+			<div className = "navbar-menu-all-btn-row">
+				<button className="navbar-hamburger" onClick={()=>setExpandNav("navbar-menu-show")}>
+					<div className="navbar-hamburger-bar"></div>
+					<div className="navbar-hamburger-bar"></div>
+					<div className="navbar-hamburger-bar"></div>
+				</button>
+				<div class="navbar-cart-link-container-mobile">
+					<a href="#" className="navbar-cart-link">
+						<ShoppingBagSvg width="45px" height="45px"/>
+						<div class="navbar-cart-num">5</div>
+					</a>
+				</div>
+				<div className="navbar-btn-container-mobile">
+					<Button btnStyle={"btn-frame-blue"}  btnText={"Contact"} btnSize="small"/>
+					<Button btnStyle={"btn-fill-blue"} btnText={"Login"} btnSize="small"/>
+				</div>
+			</div>
 			<div className={expandNav}>
 				<ul class="navbar-menu-list">
 					
