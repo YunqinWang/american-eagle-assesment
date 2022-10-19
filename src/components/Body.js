@@ -18,7 +18,7 @@ function Body() {
         <TwoColTextProduct 
           type ="product"
           title = {{
-            description:{ subtitle: "This Month", title:"Featured Products"},
+            description:{ subtitle: "This Month's", title:"Featured Products"},
             btn: {style:"btn-fill-blue", text:"View All"}
           }}
           color="blue"
@@ -29,14 +29,14 @@ function Body() {
               price:"$48"
             }},
             {product:{
-              img:require("../images/elephantsleeper.jpg"),
-              name:"Elephant Sleeper",
-              price:"$48"
+              img:require("../images/crib.jpg"),
+              name:"Mapel Baby Crip",
+              price:"$899"
             }},
             {product:{
-              img:require("../images/elephantsleeper.jpg"),
-              name:"Elephant Sleeper",
-              price:"$48"
+              img:require("../images/fox.jpg"),
+              name:"Foxy Baby Plush Doll",
+              price:"$32"
             }},
           ]}
         />

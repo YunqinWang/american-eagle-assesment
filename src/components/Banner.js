@@ -57,6 +57,9 @@ function Banner() {
         return toShow;
     }
 
+
+    let dots = slideImg.map((d,i)=>{return <button key={i} onClick = {()=>setSlideState(i)}> </button>})
+
   return (
     <section class="hero">
         <div class="hero-carousel" id="hero-carousel">
@@ -73,6 +76,9 @@ function Banner() {
                         >
                         <NavArrow width="20px"/>
                     </button>
+                    <div className = "hero-carousel-dot">
+                        {dots}
+                    </div>
                 </div>
                 <div class="hero-outter-text-container">
                     <BannerAd/>
