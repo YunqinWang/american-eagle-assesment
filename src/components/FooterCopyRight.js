@@ -27,7 +27,7 @@ function FooterCopyRight() {
                 <p>Designed and developed by <a href="#">americaneagle.com</a></p>
             </div>
             <div>
-                <img src={require("../images/logo.svg").default} alt="AmericanEagle Logo"/>
+                <img src={require("../images/logo.svg").default} alt="AmericanEagle Logo" loading="lazy"/>
             </div>
         </div>
     )

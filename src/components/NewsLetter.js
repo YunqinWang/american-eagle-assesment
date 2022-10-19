@@ -20,7 +20,8 @@ function NewsLetter() {
                     />
                     <div className="newsletter-email-svg-container">
     					<img src={require("../images/email.svg").default}       
-                            className="newsletter-email-svg" />
+                            className="newsletter-email-svg" 
+                            loading="lazy"/>
     				</div>
                     <Button btnStyle="btn-fill-red" btnText= "Sign Me Up!"/>
                 </div>

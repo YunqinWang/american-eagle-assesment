@@ -33,7 +33,7 @@ function FooterNavItem({footerCol}) {
     let socialLink = links.map(item=>{
         return(
             <a key={item.social.name}>
-                <img src={item.social.svg} alt={`${item.social.name} link`}/>
+                <img src={item.social.svg} alt={`${item.social.name} link`} loading="lazy"/>
             </a>
         )
     })

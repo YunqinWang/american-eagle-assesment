@@ -17,7 +17,7 @@ function Mission() {
                 shop for all family and friends.
             </p>
             <div className = "mission-inner-signature">
-                <img src= {require("../images/signature.svg").default} />
+                <img src= {require("../images/signature.svg").default} loading="lazy"/>
             </div>
         </div>
     </section>

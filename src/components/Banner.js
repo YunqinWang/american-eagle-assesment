@@ -20,7 +20,8 @@ function Banner() {
         return <img key={i} 
                     className = {imgClassName}
                     src={(`${slideImg[i].slide.src}`)} 
-                    alt= {`banner image ${i}`} 
+                    alt= {`banner image ${i}`}
+                    loading="lazy" 
                 />
     }
 

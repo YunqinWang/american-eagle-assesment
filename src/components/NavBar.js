@@ -139,7 +139,8 @@ function NavBar({handleSearch}) {
 										/>
 										<div className="navbar-mobile-newsletter-email-svg-container">
 											<img src={require("../images/email.svg").default} className="navbar-mobile-newsletter-email-svg"
-											alt="Newsletter email icon" />
+											alt="Newsletter email icon" 
+											loading="lazy"/>
 										</div>
 									</div>
 									<div className="navbar-mobile-newsletter-button-container">
