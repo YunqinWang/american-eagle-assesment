@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/american-eagle-assesment/static/css/main.a5d78044.css",
-    "main.js": "/american-eagle-assesment/static/js/main.9ff7d9c6.js",
+    "main.js": "/american-eagle-assesment/static/js/main.1d7fd3dc.js",
     "static/media/cribbedding.png": "/american-eagle-assesment/static/media/cribbedding.4f2d41ebfa5cf19387ea.png",
     "static/media/welovebabies-left.png": "/american-eagle-assesment/static/media/welovebabies-left.5197c6400d0ef18671a2.png",
     "static/media/furniture.png": "/american-eagle-assesment/static/media/furniture.8ef2938a1f8436247dca.png",
@@ -29,10 +29,10 @@
     "static/media/close.svg": "/american-eagle-assesment/static/media/close.b0754dcb31e5aaa3eaeed878ee8133cc.svg",
     "index.html": "/american-eagle-assesment/index.html",
     "main.a5d78044.css.map": "/american-eagle-assesment/static/css/main.a5d78044.css.map",
-    "main.9ff7d9c6.js.map": "/american-eagle-assesment/static/js/main.9ff7d9c6.js.map"
+    "main.1d7fd3dc.js.map": "/american-eagle-assesment/static/js/main.1d7fd3dc.js.map"
   },
   "entrypoints": [
     "static/css/main.a5d78044.css",
-    "static/js/main.9ff7d9c6.js"
+    "static/js/main.1d7fd3dc.js"
   ]
 }
